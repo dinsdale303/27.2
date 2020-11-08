@@ -13,7 +13,7 @@ app.use(express.json());
 
 app.post('/contact/send-message', (req, res) => {
   const { author, sender, title, message, design } = req.body;
-  if(author && sender && title && message && design) {
+  if (author && sender && title && message && design) {
     res.render('contact', { isSent: true, fileName: design });
   }
   else {
